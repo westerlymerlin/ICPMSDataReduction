@@ -145,7 +145,7 @@ color: rgb(119, 198, 1);</string>
     <string notr="true">background-color: rgb(225, 225, 225);</string>
    </property>
    <property name="text">
-    <string>Update</string>
+    <string>RUN</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_20">

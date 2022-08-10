@@ -1,15 +1,14 @@
+from PySide6.QtWidgets import *
 from app_settings import *
 import sys
 from os import path, mkdir
-from PySide6.QtWidgets import *
-from PySide6.QtGui import QColor
 from icpms_ui import Ui_Dialog
 from ICPMS_Cruncher import get_icpms_data
 import logging
 from logging.handlers import RotatingFileHandler
 
 
-class StdRedirector():
+class StdRedirector:
     def __init__(self):
         self.data = []
 
@@ -29,7 +28,8 @@ class Mainform(QDialog, Ui_Dialog):
         self.btnICPMS.clicked.connect(runicpms)
         self.toolSource.clicked.connect(choose_source_file)  # tiff to stl
         self.txtSourceFile.setText(settings['batchfilepath'])
-        self.lbl_console.setText('Console output is also found at: %s%s.log' %(settings['logging']['logfilepath'], settings['logging']['logappname']))
+        self.lbl_console.setText('Console output is also found at: %s%s.log'
+                                 % (settings['logging']['logfilepath'], settings['logging']['logappname']))
 
 
 def runicpms():
@@ -49,7 +49,6 @@ def runappexit():
     app.quit()
 
 
-
 if path.isdir(settings['logging']['logfilepath']) is False:
     mkdir(settings['logging']['logfilepath'])
 logger = logging.getLogger(settings['logging']['logappname'])
@@ -62,8 +61,6 @@ logger.addHandler(LogFile)
 sys.stdout = x = StdRedirector()
 app = QApplication(sys.argv)
 dialog = Mainform()
-sys.stdout = x = StdRedirector()
 print("********************** Starting ICPMS Data Reduction Version %s ***********************" % version)
 dialog.show()
 sys.exit(app.exec())
-

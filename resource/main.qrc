@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="images">
+    <file>iconGTRun.ico</file>
+    <file>iconGTRun.jpg</file>
+    <file>iconGTRun.svg</file>
+  </qresource>
+</RCC>

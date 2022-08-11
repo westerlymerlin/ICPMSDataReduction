@@ -27,8 +27,8 @@ def getbatchfilelist(batchlogfile):
     csvfile.close()
     count_index = 0
     for filename in batchfiles:
-        if [item[0] for item in batchfiles].count(filename[0]) > 1:
-            batchfiles[count_index][0] = batchfiles[count_index][0] + '_1'
+        if [item[0] for item in batchfiles].count(filename[0]) >1:
+            batchfiles[count_index][0] = batchfiles[count_index][0] + str(count_index)
             print('Duplicate sample name in batchlog.csv - file name set to: %s' % filename[0])
         count_index += 1
     return batchfiles
@@ -84,7 +84,8 @@ def get_icpms_data(batchfile):
         print('Writing: arithmetic_stderr.csv')
         zip_file.writestr('arithmetic_stderr.csv', string_buffer.getvalue())
         zip_file.close()
-    print('\n\nICPMS Data Reduction Finished')
+    print('================================')
+    print('ICPMS Data Reduction Finished')
     print('%s files processed' %filecounter)
     print ('Zip file is located at: %s' % zipfilename)
     print('Processing time = %s seconds' % time.process_time())

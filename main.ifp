@@ -3,7 +3,7 @@
 ProjectFileVersion = 1.1
 [General]
 Program name = ICPMS Data Reduction
-Program version = 1.0.1
+Program version = 1.0.3
 Windows 2000 = 0
 Windows XP = 0
 Windows Server 2003 = 0
@@ -55,7 +55,7 @@ Time = 2
 PlaySound = 0
 Allow = 0
 [Build]
-File = C:\Users\garyt\OneDrive - TS Technologies Ltd\GTFiles\PhD\Python Projects\ICPMSDataReduction\distribution\ICPMS_Setup.exe
+File = C:\Users\garyt\OneDrive - TS Technologies Ltd\GTFiles\PhD\Python Projects\ICPMSDataReduction\package\ICPMS_Setup.exe
 SetupIconPath = C:\Users\garyt\OneDrive - TS Technologies Ltd\GTFiles\PhD\Python Projects\ICPMSDataReduction\resource\iconGTRun.ico
 UninstallIconPath = C:\Users\garyt\OneDrive - TS Technologies Ltd\GTFiles\PhD\Python Projects\ICPMSDataReduction\resource\iconGTRun.ico
 CompressionMethod = 0

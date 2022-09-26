@@ -81,7 +81,7 @@ class Ui_Dialog(object):
     # setupUi
 
     def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"PhD Python Projects", None))
+        Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"PhD Python Projects - ICPMS Data Reduction", None))
 #if QT_CONFIG(tooltip)
         self.liststdout.setToolTip(QCoreApplication.translate("Dialog", u"All console output is logged to pp.log", None))
 #endif // QT_CONFIG(tooltip)
@@ -89,8 +89,8 @@ class Ui_Dialog(object):
         self.lbl_console.setText(QCoreApplication.translate("Dialog", u"Console Output, also logged", None))
         self.toolSource.setText(QCoreApplication.translate("Dialog", u"...", None))
         self.label_19.setText(QCoreApplication.translate("Dialog", u"Process ICPMS batch data and create mean and stderr files", None))
-        self.btnICPMS.setText(QCoreApplication.translate("Dialog", u"Update", None))
-        self.label_20.setText(QCoreApplication.translate("Dialog", u"Source File (csv)", None))
-        self.txtSourceFile.setText(QCoreApplication.translate("Dialog", u"C:\\Users\\garyt\\OneDrive - TS Technologies Ltd\\GTFiles\\PhD\\Samples\\Sample Database\\ncc.csv", None))
+        self.btnICPMS.setText(QCoreApplication.translate("Dialog", u"RUN", None))
+        self.label_20.setText(QCoreApplication.translate("Dialog", u"Batch Log (csv)", None))
+        self.txtSourceFile.setText(QCoreApplication.translate("Dialog", u"C:\\Users\\garyt\\OneDrive - TS Technologies Ltd\\GTFiles\\PhD\\Samples\\Sample Database\\batchlog.csv", None))
     # retranslateUi
 

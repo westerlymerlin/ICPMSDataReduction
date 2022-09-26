@@ -26,21 +26,20 @@ class Mainform(QDialog, Ui_Dialog):
         self.setupUi(self)
         self.btnExit.clicked.connect(runappexit)
         self.btnICPMS.clicked.connect(runicpms)
-        self.toolSource.clicked.connect(choose_source_file)  # tiff to stl
+        self.toolSource.clicked.connect(self.choose_source_file)  # tiff to stl
         self.txtSourceFile.setText(settings['batchfilepath'])
         self.lbl_console.setText('Console output is also found at: %s%s.log'
                                  % (settings['logging']['logfilepath'], settings['logging']['logappname']))
+
+    def choose_source_file(self):
+        filename = QFileDialog.getOpenFileName(self, 'Batchlog file', dialog.txtSourceFile.text(), 'batchlog.csv')
+        dialog.txtSourceFile.setText(filename[0])
+        settings['batchfilepath'] = filename[0]
 
 
 def runicpms():
     # icpmsloader.py
     get_icpms_data(dialog.txtSourceFile.text())
-
-
-def choose_source_file():
-    filename = QFileDialog.getOpenFileName(None, 'Batchlog file', dialog.txtSourceFile.text(), 'batchlog.csv')
-    dialog.txtSourceFile.setText(filename[0])
-    settings['batchfilepath'] = filename[0]
 
 
 def runappexit():
